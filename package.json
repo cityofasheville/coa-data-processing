@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "bunyan": "^1.8.5",
+    "coa-command-line-args": "^1.0.1",
     "dotenv": "^2.0.0",
     "msnodesqlv8": "^0.2.11",
     "mssql": "^3.3.0",

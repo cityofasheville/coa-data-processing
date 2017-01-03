@@ -1,6 +1,6 @@
 const bunyan = require('bunyan');
 const commands = require('./commands');
-const commandLine = require('./command_line');
+const commandLine = require('coa-command-line-args');
 
 function listCommands() {
   let docString = '';
