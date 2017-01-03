@@ -35,12 +35,11 @@ if ('log' in args.options) {
 }
 
 const command = args.args[0];
-if (!(command in commands)) {
+if (!(command in commands)) {W
   console.error(`\nERROR: Unknown processing command ${command}\n`); // eslint-disable-line no-console
   usage();
   setTimeout(() => { process.exit(0); }, 2000);
-}
-else {
+} else {
   logger.info(`Processing: ${command}.run`);
   try {
     commands[command].run(args.options, logger);
