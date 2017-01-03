@@ -6,7 +6,7 @@
   "author": "Eric Jackson <ejackson@ashevillenc.gov>",
   "license": "MIT",
   "dependencies": {
-    "bunyan": "^1.8.5",
+    "coa-node-logging": "^1.0.1",
     "coa-command-line-args": "^1.0.1",
     "dotenv": "^2.0.0",
     "pg": "6.1.0",

@@ -1,4 +1,4 @@
-const bunyan = require('bunyan');
+const logging = require('coa-node-logging');
 const commands = require('./commands');
 const commandLine = require('coa-command-line-args');
 
@@ -27,12 +27,7 @@ if (args.args.length < 1) {
   process.exit(1);
 }
 
-let logger;
-if ('log' in args.options) {
-  logger = bunyan.createLogger({ name: 'COAProcessing', streams: [{ level: 'info', path: args.options.log }] });
-} else {
-  logger = bunyan.createLogger({ name: 'COAProcessing', stream: process.stdout, level: 'info' });
-}
+const logger = logging.createLogger('COAProcessing', args.options.log ? args.options.log : null);
 
 const command = args.args[0];
 if (!(command in commands)) {
