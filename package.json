@@ -6,9 +6,10 @@
   "author": "Eric Jackson <ejackson@ashevillenc.gov>",
   "license": "MIT",
   "dependencies": {
+    "bunyan": "^1.8.5",
+    "dotenv": "^2.0.0",
     "msnodesqlv8": "^0.2.11",
     "mssql": "^3.3.0",
-    "bunyan": "^1.8.5",
     "pg": "6.1.0",
     "pg-metadata": "^5.0.0"
   },
