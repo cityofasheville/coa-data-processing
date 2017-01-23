@@ -1,7 +1,7 @@
 const sql = require('msSql');
 require('msnodesqlv8');
-
 const sqlQuery = require('./permitsQuery.sql');
+const computeSla = require('./compute_sla');
 
 const config = {
   driver: 'msnodesqlv8',
@@ -19,6 +19,7 @@ function run(options, logger) {
     new sql.Request(conn).query(sqlQuery).then((recordset) => {
       logger.info(`I got the result of length ${recordset.length}`);
       conn.close();
+      computeSla(recordset, logger);
     }).catch((err) => {
       logger.error({ err }, 'Query error');
       conn.close();
